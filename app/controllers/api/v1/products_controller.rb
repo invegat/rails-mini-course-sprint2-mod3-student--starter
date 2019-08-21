@@ -4,7 +4,7 @@ module Api
 
       def index
         if params[:order_id].present?
-          @product = Order.find(params[:order_id]).products
+          @products = Order.find(params[:order_id]).products
           # product_ids = OrderProduct.where(order_id: params[:order_id]).pluck(:product_id)
           # @products = Product.find(product_ids)
         else
